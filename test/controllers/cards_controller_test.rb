@@ -18,7 +18,7 @@ class CardsControllerTest < ActionController::TestCase
 
   test "should create card" do
     assert_difference('Card.count') do
-      post :create, card: { category: @card.category, count_liked: @card.count_liked, count_read: @card.count_read, description: @card.description, image_url: @card.image_url, poster: @card.poster, title: @card.title, url: @card.url }
+      post :create, card: { category: @card.category, count_liked: @card.count_liked, count_read: @card.count_read, description: @card.description, image_url: @card.image_url, poster: @card.poster, poster_comment: @card.poster_comment, title: @card.title, url: @card.url }
     end
 
     assert_redirected_to card_path(assigns(:card))
@@ -35,7 +35,7 @@ class CardsControllerTest < ActionController::TestCase
   end
 
   test "should update card" do
-    patch :update, id: @card, card: { category: @card.category, count_liked: @card.count_liked, count_read: @card.count_read, description: @card.description, image_url: @card.image_url, poster: @card.poster, title: @card.title, url: @card.url }
+    patch :update, id: @card, card: { category: @card.category, count_liked: @card.count_liked, count_read: @card.count_read, description: @card.description, image_url: @card.image_url, poster: @card.poster, poster_comment: @card.poster_comment, title: @card.title, url: @card.url }
     assert_redirected_to card_path(assigns(:card))
   end
 

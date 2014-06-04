@@ -1,6 +1,7 @@
 class CreateCards < ActiveRecord::Migration
   def change
     create_table :cards do |t|
+      t.string :poster_comment
       t.string :title
       t.text :description
       t.string :url

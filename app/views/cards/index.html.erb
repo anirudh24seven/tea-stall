@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Poster comment</th>
       <th>Title</th>
       <th>Description</th>
       <th>Url</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @cards.each do |card| %>
       <tr>
+        <td><%= strip_tags(card.poster_comment) %></td>
         <td><%= card.title %></td>
         <td><%= card.description %></td>
         <td><%= card.url %></td>
