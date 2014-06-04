@@ -1,0 +1,238 @@
+/* line 4, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #E0E0E0;
+  padding: 0px;
+  margin: 0px;
+  color: #333;
+  min-height: 100%;
+}
+
+/* line 13, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.header {
+  text-align: center;
+  position: fixed;
+  height: 30px;
+  left: 0px;
+  right: 0px;
+  background: #FFF;
+  padding: 25px 0px 5px 0px;
+  border-bottom: 5px solid #CCC;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 26, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.content {
+  position: fixed;
+  top: 62px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 30px;
+}
+
+/* line 37, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.footer {
+  position: fixed;
+  height: 22px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #FFF;
+  color: 888;
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+  border-top: 5px solid #CCC;
+  font-size: 12px;
+}
+
+/* line 51, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.float-left .card {
+  float: left;
+  width: 300px;
+  height: 270px;
+}
+
+/* line 57, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.multi-column {
+  columns: 300px 3;
+  -webkit-columns: 300px 3;
+}
+
+/* line 62, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.card {
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-bottom: 3px solid #CCC;
+  width: 40%;
+  padding: 4px 8px;
+  margin: 16px;
+  overflow: hidden;
+}
+
+/* line 72, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.card h1 {
+  margin: 0px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+/* line 78, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.card p {
+  margin: 0px;
+  padding: 10px;
+}
+
+/* line 83, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.card-image {
+  width: 100%;
+  height: 200px;
+  padding: 0px;
+  margin: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 94, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.card-image .banner {
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  right: 0px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url("../images/new.png");
+  position: absolute;
+}
+
+/* line 110, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.card-image h1,
+.card-image h2,
+.card-image h3,
+.card-image h4,
+.card-image h5,
+.card-image h6 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.65);
+  margin: 0px;
+  padding: 6px;
+  border: none;
+}
+
+/* line 122, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.rightColumn,
+.leftColumn {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+/* line 128, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/cards.css.scss */
+.column {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 1, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 0px 8px;
+}
+
+/* line 10, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 27, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 34, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 39, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 43, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 49, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 56, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 66, /Users/anirudh/workspace/rails/frilp/heroku/teastall/teastall/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
