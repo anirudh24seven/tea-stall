@@ -25,7 +25,9 @@
 
         <%= card.count_read %>
         <%= card.count_liked %>
-        <%= card.category %>
+        <dl>
+          <dt>Category: <%= card.category %></dt>
+        </dl>
 
         <%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %>
         <!--td><%= link_to 'Edit', edit_card_path(card) %></td-->
