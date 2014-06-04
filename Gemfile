@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'high_voltage'
 
 group :production do
   gem 'rails_12factor'
