@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  url: MyString
+  poster: MyString
+  count_read: 1
+  count_liked: 1
+  category: MyString
+  image_url: MyString
+
+two:
+  title: MyString
+  description: MyText
+  url: MyString
+  poster: MyString
+  count_read: 1
+  count_liked: 1
+  category: MyString
+  image_url: MyString
