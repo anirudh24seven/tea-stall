@@ -19,9 +19,9 @@
   <tbody>
     <% @cards.each do |card| %>
       <tr>
-        <td><%= strip_tags(card.poster_comment) %></td>
-        <td><%= card.title %></td>
-        <td><%= card.description %></td>
+        <td><%= truncate(strip_tags(card.poster_comment), :length => 120) %></td>
+        <td><%= truncate(strip_tags(card.title), :length => 80) %></td>
+        <td><%= truncate(strip_tags(card.description), :length => 300) %></td>
         <td><%= card.url %></td>
         <td><%= card.poster %></td>
         <td><%= card.count_read %></td>
