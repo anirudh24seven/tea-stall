@@ -41,7 +41,11 @@
       </ul>
       <ul class="nav navbar-nav pull-right">
         <li class="<%= 'active' if current_page?(new_card_path) %>"><%= link_to 'New Card', new_card_path %>
-        <li class="<%= 'active' if current_page?(new_card_path) %>"><%= link_to 'Sign in', new_card_path %>
+        <% if current_user %>
+          <li><%= link_to current_user.name + ", Sign out", signout_path, id: "sign_out" %></li>
+        <% else %>
+          <li><%= link_to "Sign in", "/auth/facebook", id: "sign_in" %></li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -50,13 +54,8 @@
 
   <div class="container" id="content">
 
-    <!--div id="user-widget">
-      <% if current_user %>
-        Welcome <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      <% else %>
-        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-      <% end %>
+    <div id="user-widget">
+
     </div-->
 
     <%= yield %>
