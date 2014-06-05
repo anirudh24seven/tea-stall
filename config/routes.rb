@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :cards
 
-  # root 'cards#index'
+  root 'cards#index'
 
   get '/business' => 'high_voltage/pages#show', id: 'business'
   get '/design' => 'high_voltage/pages#show', id: 'design'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/all', to:redirect('/')
 
-  root :to => 'high_voltage/pages#show', id: 'all'
+  # root :to => 'high_voltage/pages#show', id: 'all'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

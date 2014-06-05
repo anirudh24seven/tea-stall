@@ -1,12 +1,44 @@
-<% provide(:title, "All news") %>
+<h1>News Feed</h1>
 
-<% provide(:jumbotron, '
-      <h1>Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-  '.html_safe)%>
+<div id="content">
+<%= link_to 'New Card', new_card_path %>
 
-  <div class="container">
-    <!-- Example row of columns -->
+<table class="feed">
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+      <div class="post">
 
-    </div>
+
+
+        <!-- td><%= truncate(strip_tags(card.image_url), :length => 40) %></td -->
+        <div class="card">
+          <dl>
+            <dt><%= card.poster %></dt>
+            <dd><%= truncate(strip_tags(card.poster_comment), :length => 120) %></dd>
+          </dl>
+
+          <dl>
+            <dt><%= truncate(strip_tags(card.title), :length => 80) %></dt>
+            <dd><%= truncate(strip_tags(card.description), :length => 300) %></dd>
+            <dd><%= link_to truncate(strip_tags(card.url), :length => 40), card.url, :target => "_blank" %></dd>
+          </dl>
+
+
+        <%= card.count_read %>
+        <%= card.count_liked %>
+        <dl>
+          <dt>Category: <%= card.category %></dt>
+        </dl>
+
+        <%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %>
+        <!--td><%= link_to 'Edit', edit_card_path(card) %></td-->
+        <!--td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td-->
+
+        </div>
+      </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
