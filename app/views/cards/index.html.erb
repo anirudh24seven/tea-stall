@@ -8,7 +8,6 @@
       <tr>
       <div class="post">
 
-
         <div class="card">
           <dl>
             <dt><%= card.poster %></dt>
@@ -23,12 +22,12 @@
             <dd><%= truncate(strip_tags(card.description), :length => 300) %></dd>
           </dl>
 
-        <%= card.count_read %>
-        <%= card.count_liked %>
-        <dl>
-          <dd>Category: <%= card.category %></dd>
-          <dd><%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %></dd>
-        </dl>
+          <%= card.count_read %>
+          <%= card.count_liked %>
+          <dl>
+            <dd>Category: <%= card.category %></dd>
+            <dd><%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %></dd>
+          </dl>
         </div>
       </div>
       </tr>
