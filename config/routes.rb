@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'sessions/create'
 
   get 'sessions/destroy'
@@ -11,8 +12,14 @@ Rails.application.routes.draw do
   get '/design' => 'high_voltage/pages#show', id: 'design'
   get '/development' => 'high_voltage/pages#show', id: 'development'
   get '/growth' => 'high_voltage/pages#show', id: 'growth'
-
   get '/all', to:redirect('/')
+
+  get 'feed/development'
+  get 'feed/design'
+  get 'feed/business'
+  get 'feed/growth'
+  get '/feed', to:redirect('/')
+
 
   # root :to => 'high_voltage/pages#show', id: 'all'
 

@@ -1,7 +1,7 @@
-<h1>News Feed</h1>
+<h1>Feed#growth</h1>
+<p>Find me in app/views/feed/growth.html.erb</p>
 
 <div id="content">
-<%= link_to 'New Card', new_card_path %>
 
 <table class="feed">
   <tbody>
@@ -19,7 +19,7 @@
           <dl>
             <dt><%= truncate(strip_tags(card.title), :length => 80) %></dt>
             <dd><%= truncate(strip_tags(card.description), :length => 300) %></dd>
-            <dd><%= link_to truncate(strip_tags(card.url), :length => 40), card.url, :target => "_blank" %></dd>
+            <dd><%= link_to truncate(strip_tags(card.url), :length => 80), card.url, :target => "_blank" %></dd>
           </dl>
 
 
@@ -40,3 +40,4 @@
   </tbody>
 </table>
 </div>
+
