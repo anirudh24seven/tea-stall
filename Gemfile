@@ -42,5 +42,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'high_voltage'
 
+gem 'opengraph'
+
 gem 'rails_12factor', group: :production
 

@@ -24,7 +24,9 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
+    og_card = OpenGraph.fetch(card_params[:url])
     @card = Card.new(card_params)
+    @card.title = og_card.title
 
     respond_to do |format|
       if @card.save
