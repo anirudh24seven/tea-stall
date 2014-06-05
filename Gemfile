@@ -42,6 +42,5 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'high_voltage'
 
-group :production do
-  gem 'rails_12factor'
-end
+gem 'rails_12factor', group: :production
+
