@@ -26,7 +26,10 @@ class CardsController < ApplicationController
   def create
     og_card = OpenGraph.fetch(card_params[:url])
     @card = Card.new(card_params)
-    @card.title = og_card.title
+    @card.title = og_card.title if og_card && og_card.has_key?(:title)
+    @card.image_url = og_card.image if og_card && og_card.has_key?(:image)
+    @card.description = og_card.description if og_card && og_card.has_key?(:description)
+
 
     respond_to do |format|
       if @card.save

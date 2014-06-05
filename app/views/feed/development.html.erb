@@ -17,16 +17,18 @@
           </dl>
 
           <dl>
+            <%= image_tag card.image_url, :size => "140x140", :crop => :fill %>
+            <dt><%= link_to truncate(strip_tags(card.url), :length => 80), card.url, :target => "_blank" %></dd>
             <dt><%= truncate(strip_tags(card.title), :length => 80) %></dt>
             <dd><%= truncate(strip_tags(card.description), :length => 300) %></dd>
-            <dd><%= link_to truncate(strip_tags(card.url), :length => 80), card.url, :target => "_blank" %></dd>
+
           </dl>
 
 
         <%= card.count_read %>
         <%= card.count_liked %>
         <dl>
-          <dt>Category: <%= card.category %></dt>
+          <dd>Category: <%= card.category %></dt>
         </dl>
 
         <%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %>
