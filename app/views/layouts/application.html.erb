@@ -41,22 +41,14 @@
       </ul>
       <ul class="nav navbar-nav pull-right">
         <li class="<%= 'active' if current_page?(new_card_path) %>"><%= link_to 'New Card', new_card_path %>
+        <li class="<%= 'active' if current_page?(new_card_path) %>"><%= link_to 'Sign in', new_card_path %>
       </ul>
     </div>
   </div>
 </div>
 
-<% if current_page?(root_path) %>
-  <% if content_for?(:jumbotron) %>
-    <div class="jumbotron">
-      <div class="container">
-        <%= yield :jumbotron %>
-      </div>
-    </div>
-  <% end %>
-<% else %>
+
   <div class="container" id="content">
-<% end %>
 
     <!--div id="user-widget">
       <% if current_user %>
