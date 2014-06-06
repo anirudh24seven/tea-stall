@@ -30,7 +30,7 @@ class CardsController < ApplicationController
     @card.image_url = "http://upload.wikimedia.org/wikipedia/commons/e/eb/Blank.jpg" # Default image
     @card.image_url = og_card.image if og_card && og_card.has_key?(:image)
     @card.description = og_card.description if og_card && og_card.has_key?(:description)
-
+    @card.poster = current_user.name
 
     respond_to do |format|
       if @card.save
