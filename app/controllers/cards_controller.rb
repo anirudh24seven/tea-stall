@@ -4,7 +4,7 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = Card.all
+    @cards = Card.reorder("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /cards/1

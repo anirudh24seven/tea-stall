@@ -46,3 +46,4 @@ gem 'opengraph'
 
 gem 'rails_12factor', group: :production
 
+gem 'will_paginate'
