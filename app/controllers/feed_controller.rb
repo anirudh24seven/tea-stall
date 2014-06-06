@@ -1,17 +1,17 @@
 class FeedController < ApplicationController
   def development
-    @cards = Card.select{|card| card.category.casecmp('development')==0}
+    @cards = Card.where("category LIKE ?", "development").reorder("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   def design
-    @cards = Card.select{|card| card.category.casecmp('design')==0}
+    @cards = Card.where("category LIKE ?", "design").reorder("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   def business
-    @cards = Card.select{|card| card.category.casecmp('business')==0}
+    @cards = Card.where("category LIKE ?", "business").reorder("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   def growth
-    @cards = Card.select{|card| card.category.casecmp('growth')==0}
+    @cards = Card.where("category LIKE ?", "growth").reorder("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 end
