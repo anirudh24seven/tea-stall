@@ -23,8 +23,11 @@
             <dd><%= truncate(strip_tags(card.description), :length => 300) %></dd>
           </dl>
 
-          <%= card.count_read %>
-          <%= card.count_liked %>
+          <dl>
+            <dd><%= card.count_liked %> likes</dd>
+            <!-- dd><%= card.count_read %> People have read this article from this link</dd-->
+          </dl>
+
           <dl>
             <dd>Category: <%= card.category %></dd>
             <dd><%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %></dd>
