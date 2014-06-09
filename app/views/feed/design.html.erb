@@ -11,7 +11,7 @@
         <div class="card">
           <dl>
             <dt><%= card.poster %></dt>
-            <dd><%= truncate(strip_tags(card.poster_comment), :length => 120) %></dd>
+            <dd><%= truncate(strip_tags(card.poster_comment), :length => 140) %></dd>
           </dl>
           <dl>
             <dt><%= link_to truncate(strip_tags(card.url), :length => 80), card.url, :target => "_blank" %></dd>
