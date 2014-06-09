@@ -15,6 +15,13 @@ class CardsController < ApplicationController
   # GET /cards/new
   def new
     @card = Card.new
+    if params[:url]
+      @card.url = params[:url]
+    end
+
+    if params[:comment]
+      @card.poster_comment = params[:comment]
+    end
   end
 
   # GET /cards/1/edit
