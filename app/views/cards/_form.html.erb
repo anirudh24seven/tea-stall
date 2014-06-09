@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.select :category, options_for_select(%w[Development Design Business Growth]) %>
   </div>
 
   <div class="actions">
