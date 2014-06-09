@@ -38,6 +38,10 @@ class CardsController < ApplicationController
     @card.image_url = og_card.image if og_card && og_card.has_key?(:image)
     @card.description = og_card.description if og_card && og_card.has_key?(:description)
     @card.poster = current_user.name
+    @card.poster_uid = current_user.uid
+    @card.poster_profile_url = "http://graph.facebook.com/" + @card.poster_uid + "/picture?type=small"
+    @card.count_read = 0
+    @card.count_liked = 0
 
     respond_to do |format|
       if @card.save

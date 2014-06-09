@@ -10,6 +10,7 @@
 
         <div class="card">
           <dl>
+            <%= image_tag card.poster_profile_url %>
             <dt><%= card.poster %></dt>
             <dd><%= truncate(strip_tags(card.poster_comment), :length => 140) %></dd>
           </dl>
