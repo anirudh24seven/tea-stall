@@ -45,6 +45,20 @@
           <li><%= link_to current_user.name %></li>
           <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
         <% end %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iasmani Pinazo <span class="glyphicon glyphicon-user pull-right"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+            <li class="divider"></li>
+            <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+            <li class="divider"></li>
+            <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
+            <li class="divider"></li>
+            <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+            <li class="divider"></li>
+            <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -73,7 +87,21 @@
         </p>
     </div-->
     <% else %>
-    <%= link_to "Sign in with facebook", "/auth/facebook", id: "sign_in" %>
+    <div class="container">
+      <div class="row">
+        <form class="form-signin mg-btm">
+          <h3 class="heading-desc">Login to TeaStall</h3>
+            <div class="social-box">
+              <div class="row mg-btm">
+                <div class="col-md-12">
+                    <a href="/auth/facebook" class="btn btn-primary btn-block">Login with Facebook</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </form>
+  </div>
+</div>
   <% end %>
   </div>
 
