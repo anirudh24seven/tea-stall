@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'cards#index'
 
+  match '/votes', to: 'votes#create', via: :post
+
   get '/business' => 'high_voltage/pages#show', id: 'business'
   get '/design' => 'high_voltage/pages#show', id: 'design'
   get '/development' => 'high_voltage/pages#show', id: 'development'

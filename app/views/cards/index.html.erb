@@ -1,5 +1,5 @@
 <h1>News Feed</h1>
-
+<% if current_user %>
 <div id="content">
 <table class="feed">
   <tbody>
@@ -23,8 +23,16 @@
           </dl>
 
           <dl>
-            <dd><%= card.count_liked %> likes</dd>
+            <dd><%=  %> votes</dd>
             <!-- dd><%= card.count_read %> People have read this article from this link</dd-->
+
+            <%= form_for(@vote, :remote => true) do |f| %>
+            <%= f.hidden_field "card_id", :value => card.id %>
+            <%= f.hidden_field "user_id", :value => @user.id %>
+            <div class="actions">
+              <%= f.submit "Vote" %>
+            </div>
+            <% end %>
           </dl>
 
           <dl>
@@ -39,6 +47,7 @@
 </table>
 
 <%= will_paginate @cards %>
+<%end%>
 </div>
 
 
