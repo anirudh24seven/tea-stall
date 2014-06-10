@@ -1,6 +1,7 @@
 <h1>New card</h1>
 <div id="content">
   <% if current_user %>
+    <textarea placeholder="What's on your mind?"></textarea>
     <%= render 'form' %>
   <% else %>
     <p>You should be signed in to post new cards</p>

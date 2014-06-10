@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background:#E0E0E0;
+    background-color:#E0E0E0;
     padding:0px;
     margin:0px;
     color:#333;
@@ -63,10 +63,12 @@ body {
     background:#FFF;
     border:1px solid #AAA;
     border-bottom:3px solid #CCC;
-    width: 40%;
-    padding:4px 8px;
-    margin:16px;
+    width: 50%;
+    padding:16px 8px;
+    margin:8px auto;
     overflow:hidden;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    -webkit-border-radius: 3px;
 }
 
 .card h1 {
@@ -140,10 +142,7 @@ nav {
     background:#fff;
 }
 .dropdown {
-    background:#fff;
-    border:1px solid #ccc;
-    border-radius:4px;
-    width:300px;
+    background:#222;
 }
 .dropdown-menu>li>a {
     color:#428bca;
@@ -152,7 +151,6 @@ nav {
     border-radius:4px;
     box-shadow:none;
     margin-top:20px;
-    width:300px;
 }
 .dropdown ul.dropdown-menu:before {
     content: "";
@@ -248,4 +246,9 @@ nav {
 }
 .mg-btm{
     margin-bottom:20px;
+}
+
+#profile_pic{
+    float: left;
+    padding-right: 8px;
 }
