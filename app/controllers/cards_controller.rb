@@ -49,6 +49,7 @@ class CardsController < ApplicationController
       @card.poster_profile_url = "http://graph.facebook.com/" + @card.poster_uid + "/picture?type=small"
       @card.count_read = 0
       @card.count_liked = 0
+      @card.votes_count = 0
 
       respond_to do |format|
         if @card.save
