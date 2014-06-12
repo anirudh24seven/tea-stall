@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+  <div class="post">
+        <!-- td><%= truncate(strip_tags(@card.image_url), :length => 40) %></td -->
+        <div class="card">
+          <dl>
+            <dt><%= @card.poster %></dt>
+            <dd><%= truncate(strip_tags(@card.poster_comment), :length => 120) %></dd>
+          </dl>
+          <dl>
+            <dt><%= link_to truncate(strip_tags(@card.url), :length => 80), @card.url, :target => "_blank" %></dd>
+          </dl>
+          <dl>
+            <%= image_tag @card.image_url, :size => "140x140", :crop => :fill %>
+            <dt><%= truncate(strip_tags(@card.title), :length => 80) %></dt>
+            <dd><%= truncate(strip_tags(@card.description), :length => 300) %></dd>
+          </dl>
+
+          <%= @card.count_read %>
+          <%= @card.count_liked %>
+          <dl>
+            <dd>Category: <%= @card.category %></dd>
+            <dd><%= link_to time_ago_in_words(@card.updated_at) + " ago", @card, :target => "_blank" %></dd>
+          </dl>
+        </div>
+      </div>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Home', cards_path %>

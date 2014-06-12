@@ -1,0 +1,254 @@
+// Place all the styles related to the Cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#E0E0E0;
+    padding:0px;
+    margin:0px;
+    color:#333;
+    min-height:100%;
+}
+
+.header {
+    text-align:center;
+    position:fixed;
+    height:30px;
+    left:0px;
+    right:0px;
+    background:#FFF;
+    padding:25px 0px 5px 0px;
+    border-bottom:5px solid #CCC;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.content {
+    position:fixed;
+    top:62px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:scroll;
+    -webkit-overflow-scrolling:touch;
+    margin-bottom:30px;
+}
+
+.footer {
+    position:fixed;
+    height:22px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background:#FFF;
+    color:888;
+    text-align:center;
+    padding:5px 0px 0px 0px;
+    border-top:5px solid #CCC;
+    font-size:12px;
+}
+
+.float-left .card {
+    float:left;
+    width:300px;
+    height:270px;
+}
+
+.multi-column {
+    columns:300px 3;
+    -webkit-columns:300px 3;
+}
+
+.card {
+    background:#FFF;
+    border:1px solid #AAA;
+    border-bottom:3px solid #CCC;
+    width: 50%;
+    padding:16px 8px;
+    margin:8px auto;
+    overflow:hidden;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    -webkit-border-radius: 3px;
+}
+
+.card h1 {
+    margin:0px;
+    padding:10px;
+    padding-bottom:0px;
+}
+
+.card p {
+    margin:0px;
+    padding:10px;
+}
+
+.card-image {
+    width:100%;
+    height:200px;
+    padding:0px;
+    margin:0px;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    overflow:hidden;
+}
+
+.card-image .banner {
+    height:50px;
+    width:50px;
+    top:0px;
+    right:0px;
+    background-position:top right;
+    background-repeat:no-repeat;
+    background-image:url('../images/new.png');
+    position:absolute;
+}
+
+.card-image h1,
+.card-image h2,
+.card-image h3,
+.card-image h4,
+.card-image h5,
+.card-image h6 {
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    color:white;
+    background:rgba(0,0,0,0.65);
+    margin:0px;
+    padding:6px;
+    border:none;
+}
+
+.rightColumn,
+.leftColumn {
+    display:inline-block;
+    width:49%;
+    vertical-align:top;
+}
+
+.column {
+    display:inline-block;
+    vertical-align:top;
+}
+
+nav {
+    left:50%;
+    margin-left:-150px;
+    top:50px;
+    position:absolute;
+}
+.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background:#fff;
+}
+.dropdown {
+    background:#222;
+}
+.dropdown-menu>li>a {
+    color:#428bca;
+}
+.dropdown ul.dropdown-menu {
+    border-radius:4px;
+    box-shadow:none;
+    margin-top:20px;
+}
+.dropdown ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    z-index: 9;
+}
+
+.form-signin {
+  max-width: 400px;
+  display:block;
+  background-color: #f7f7f7;
+  -moz-box-shadow: 0 0 3px 3px #888;
+    -webkit-box-shadow: 0 0 3px 3px #888;
+    box-shadow: 0 0 3px 3px #888;
+  border-radius:2px;
+}
+.main{
+    padding: 38px;
+}
+.social-box{
+  margin: 0 auto;
+  padding: 38px;
+  border-bottom:1px #ccc solid;
+}
+.social-box a{
+  font-weight:bold;
+  font-size:18px;
+  padding:8px;
+}
+.social-box a i{
+  font-weight:bold;
+  font-size:20px;
+}
+.heading-desc{
+    font-size:20px;
+    font-weight:bold;
+    padding:38px 38px 0px 38px;
+
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: 20px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.login-footer{
+    background:#f0f0f0;
+    margin: 0 auto;
+    border-top: 1px solid #dadada;
+    padding:20px;
+}
+.login-footer .left-section a{
+    font-weight:bold;
+    color:#8a8a8a;
+    line-height:19px;
+}
+.mg-btm{
+    margin-bottom:20px;
+}
+
+#profile_pic{
+    float: left;
+    padding-right: 8px;
+}

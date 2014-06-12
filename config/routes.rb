@@ -1,5 +1,30 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :cards
+
+  root 'cards#index'
+
+  match '/votes', to: 'votes#create', via: :post
+
+  get '/business' => 'high_voltage/pages#show', id: 'business'
+  get '/design' => 'high_voltage/pages#show', id: 'design'
+  get '/development' => 'high_voltage/pages#show', id: 'development'
+  get '/growth' => 'high_voltage/pages#show', id: 'growth'
+  get '/all', to:redirect('/')
+
+  get 'feed/development'
+  get 'feed/design'
+  get 'feed/business'
+  get 'feed/growth'
+  get '/feed', to:redirect('/')
+
+
+  # root :to => 'high_voltage/pages#show', id: 'all'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,4 +79,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
 end

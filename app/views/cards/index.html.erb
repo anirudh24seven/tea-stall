@@ -1,0 +1,60 @@
+<% if current_user %>
+<div id="content">
+<table class="feed">
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+      <div class="post">
+
+        <div class="card">
+          <dl>
+            <%= image_tag card.poster_profile_url, :id => "profile_pic" %>
+            <dt><%= card.poster %></dt>
+            <dd><%= link_to time_ago_in_words(card.updated_at) + " ago", card, :target => "_blank" %></dd>
+          </dl>
+          <dl>
+            <dd><%= truncate(strip_tags(card.poster_comment), :length => 140) %></dd>
+          </dl>
+          <dl>
+            <dt><%= link_to truncate(strip_tags(card.url), :length => 120), card.url, :target => "_blank" %></dd>
+          </dl>
+          <dl>
+            <%=link_to (image_tag card.image_url, :width => "100%", :crop => :fill), card.url, :target => "_blank" %>
+            <dt><%=link_to (truncate(strip_tags(card.title), :length => 120)), card.url, :target => "_blank" %></dt>
+            <dd><%=link_to (truncate(strip_tags(card.description), :length => 300)), card.url, :target => "_blank" %></dd>
+          </dl>
+
+          <dl>
+            <% vote_exists = Vote.where(:cards_id => card.id, :user_id => @user.id).first %>
+            <% if (vote_exists.nil? || vote_exists.blank?) %>
+              <dd><%= card.votes_count %> people voted for this</dd>
+              <!-- dd><%= card.count_read %> People have read this article from this link</dd-->
+
+              <dd><%= button_to 'Vote',
+              {:controller => "votes", :action => "create", :vote => {:card_id => card.id, :user_id=> @user.id}},
+              :method=>:post, :remote => true, :id => "upvote_button"  %></dd>
+
+            <%else %>
+              <% if card.votes_count = 1%>
+              <dd>You voted for this</dd>
+              <% else %>
+              <dd>You and <%= card.votes_count - 1%> people voted for this</dd>
+              <% end %>
+            <% end %>
+          </dl>
+
+          <dl>
+            <dd>Category: <%= card.category %></dd>
+          </dl>
+        </div>
+      </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @cards %>
+<%end%>
+</div>
+
+
